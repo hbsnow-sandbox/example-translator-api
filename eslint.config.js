@@ -3,14 +3,16 @@ import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
+import eslintConfigPrettier from "eslint-config-prettier";
 import tailwind from "eslint-plugin-tailwindcss";
 
 export default tseslint.config(
-  { ignores: ["dist"] },
+  { ignores: ["dist", "src/components/ui"] },
   {
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,
+      eslintConfigPrettier,
       ...tailwind.configs["flat/recommended"],
     ],
     files: ["**/*.{ts,tsx}"],
@@ -28,6 +30,16 @@ export default tseslint.config(
         "warn",
         { allowConstantExport: true },
       ],
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+          caughtErrorsIgnorePattern: "^_",
+          destructuredArrayIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+        },
+      ],
+      "tailwindcss/no-custom-classname": "off",
     },
-  }
+  },
 );
