@@ -3,6 +3,8 @@ import { Summary } from "@/features/summary";
 import { ProductionLine } from "@/features/production-line";
 import { Inventory } from "@/features/inventory";
 import { Alert } from "@/features/alert";
+import { useEffect } from "react";
+import { loadCatalog } from "@/lib/load-catalog";
 
 export const Route = createLazyFileRoute("/")({
   component: Index,
@@ -30,5 +32,9 @@ export const DashBoard = () => {
 };
 
 function Index() {
+  useEffect(() => {
+    loadCatalog("ja");
+  }, []);
+
   return <DashBoard />;
 }

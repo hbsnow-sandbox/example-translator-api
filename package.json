@@ -8,9 +8,12 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint . && prettier --check .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "extract": "lingui extract",
+    "compile": "lingui compile --typescript"
   },
   "dependencies": {
+    "@lingui/react": "5.1.0",
     "@radix-ui/react-slot": "1.1.1",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
@@ -23,12 +26,15 @@
   },
   "devDependencies": {
     "@eslint/js": "9.16.0",
+    "@lingui/cli": "5.1.0",
+    "@lingui/babel-plugin-lingui-macro": "5.1.0",
+    "@lingui/vite-plugin": "5.1.0",
     "@tanstack/router-devtools": "1.89.0",
     "@tanstack/router-plugin": "1.87.13",
     "@types/node": "22.10.1",
     "@types/react": "19.0.1",
     "@types/react-dom": "19.0.1",
-    "@vitejs/plugin-react-swc": "3.7.2",
+    "@vitejs/plugin-react": "4.3.4",
     "autoprefixer": "10.4.20",
     "eslint": "9.16.0",
     "eslint-config-prettier": "9.1.0",

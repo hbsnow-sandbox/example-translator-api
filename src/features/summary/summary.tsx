@@ -1,32 +1,45 @@
 import { SummaryCard } from "@/features/summary/summary-card";
 import { Bell, Package, Percent, TrendingUp } from "lucide-react";
+import { useLingui } from "@lingui/react/macro";
+
+const summary = {
+  production: { value: 1530, trend: 5 },
+  inventory: { value: 12.5, trend: 2 },
+  utilization: { value: 89, trend: -1 },
+  quality: { value: 98.5, trend: 0.5 },
+};
 
 export const Summary = () => {
+  const { t } = useLingui();
+
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
       <SummaryCard
-        title="総生産量"
+        title={t`総生産量`}
         icon={<TrendingUp className="size-4 text-muted-foreground" />}
-        value="1,530 個"
-        trend="先月比 +5%"
+        value={summary.production.value}
+        unit={t`個`}
+        trend={t`先月比` + ` ${summary.production.trend}%`}
       />
       <SummaryCard
-        title="在庫回転率"
+        title={t`在庫回転率`}
         icon={<Package className="size-4 text-muted-foreground" />}
-        value="12.5"
-        trend="先月比 +2%"
+        value={summary.inventory.value}
+        trend={t`先月比` + ` ${summary.inventory.trend}%`}
       />
       <SummaryCard
-        title="稼働率"
+        title={t`稼働率`}
         icon={<Percent className="size-4 text-muted-foreground" />}
-        value="89%"
-        trend="先月比 -1%"
+        value={summary.utilization.value}
+        unit="%"
+        trend={t`先月比` + ` ${summary.utilization.trend}%`}
       />
       <SummaryCard
-        title="品質合格率"
+        title={t`品質合格率`}
         icon={<Bell className="size-4 text-muted-foreground" />}
-        value="98.5%"
-        trend="先月比 +0.5%"
+        value={summary.quality.value}
+        unit="%"
+        trend={t`先月比` + ` ${summary.quality.trend}%`}
       />
     </div>
   );

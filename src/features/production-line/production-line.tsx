@@ -23,7 +23,7 @@ export const ProductionLine = () => {
       <CardContent>
         <ChartContainer
           config={{
-            production: { label: "生産量" },
+            production: { label: `生産量` },
           }}
           className="h-[280px] w-full"
         >
