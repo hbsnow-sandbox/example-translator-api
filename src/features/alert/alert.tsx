@@ -1,16 +1,23 @@
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { ChevronDown } from "lucide-react";
-import { alertData } from "./alert-data";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const data = alertData.slice(0, 3);
+const alerts = [
+  {
+    id: "1",
+    message: "製品 E の不良率が上昇傾向",
+    severity: "medium",
+  },
+  {
+    id: "2",
+    message: "エネルギー消費が閾値を超えています",
+    severity: "medium",
+  },
+  {
+    id: "3",
+    message: "ライン A の生産効率が目標値未達",
+    severity: "high",
+  },
+];
 
 export const Alert = () => {
   return (
@@ -20,7 +27,7 @@ export const Alert = () => {
       </CardHeader>
       <CardContent>
         <ul className="space-y-2">
-          {data.map((alert) => (
+          {alerts.map((alert) => (
             <li key={alert.id} className="flex items-center space-x-2">
               <Badge
                 variant={alert.severity === "high" ? "destructive" : "outline"}
@@ -32,13 +39,6 @@ export const Alert = () => {
           ))}
         </ul>
       </CardContent>
-
-      <CardFooter>
-        <Button asChild>
-          <ChevronDown className="mr-2 size-4" />
-          もっと見る
-        </Button>
-      </CardFooter>
     </Card>
   );
 };

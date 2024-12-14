@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "typecheck": "tsc --noEmit",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint . && prettier --check .",
@@ -22,6 +23,8 @@
   },
   "devDependencies": {
     "@eslint/js": "9.16.0",
+    "@tanstack/router-devtools": "1.89.0",
+    "@tanstack/router-plugin": "1.87.13",
     "@types/node": "22.10.1",
     "@types/react": "19.0.1",
     "@types/react-dom": "19.0.1",
