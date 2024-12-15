@@ -1,39 +1,21 @@
-import { isTranslationSupported } from "@/config/support";
-import { useEffect } from "react";
 import { Link } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
 
 export const LangSelector = () => {
-  useEffect(() => {
-    if (!isTranslationSupported) {
-      return;
-    }
-
-    const fn = async () => {
-      // const result = await window.translation.canTranslate({
-      //   sourceLanguage: "ja",
-      //   targetLanguage: "en",
-      // });
-      // console.log(result);
-
-      const translator = await self.translation.createTranslator({
-        sourceLanguage: "ja",
-        targetLanguage: "en",
-      });
-
-      const result = await translator.translate("日本語ですね");
-      console.log(result);
-    };
-
-    fn();
-  }, []);
-
-  if (!isTranslationSupported) {
-    return null;
-  }
-
   return (
     <div>
-      <Link to="/">ja</Link> / <Link to="/en">en</Link>
+      <Button
+        asChild
+        className="rounded-e-none rounded-s-full border border-r-0 bg-secondary pl-6 text-primary hover:text-primary-foreground data-[status=active]:bg-primary data-[status=active]:text-primary-foreground"
+      >
+        <Link to="/">ja</Link>
+      </Button>
+      <Button
+        asChild
+        className="rounded-e-full rounded-s-none border border-l-0 bg-secondary pr-6 text-primary hover:text-primary-foreground data-[status=active]:bg-primary data-[status=active]:text-primary-foreground"
+      >
+        <Link to="/en">en</Link>
+      </Button>
     </div>
   );
 };
