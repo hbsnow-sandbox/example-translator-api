@@ -1,7 +1,7 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { DashBoard } from "../index.lazy";
 import { useEffect } from "react";
-import { loadCatalog } from "@/lib/load-catalog";
+import { dynamicActivate } from "@/lib/dynamic-activate";
 
 export const Route = createLazyFileRoute("/en/")({
   component: Index,
@@ -9,7 +9,7 @@ export const Route = createLazyFileRoute("/en/")({
 
 function Index() {
   useEffect(() => {
-    loadCatalog("en");
+    dynamicActivate("en");
   }, []);
 
   return <DashBoard />;

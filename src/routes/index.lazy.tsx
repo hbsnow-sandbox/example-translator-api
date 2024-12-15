@@ -4,7 +4,7 @@ import { ProductionLine } from "@/features/production-line/components";
 import { Inventory } from "@/features/inventory/components";
 import { Alert } from "@/features/alert/components";
 import { useEffect } from "react";
-import { loadCatalog } from "@/lib/load-catalog";
+import { dynamicActivate } from "@/lib/dynamic-activate";
 
 export const Route = createLazyFileRoute("/")({
   component: Index,
@@ -33,7 +33,7 @@ export const DashBoard = () => {
 
 function Index() {
   useEffect(() => {
-    loadCatalog("ja");
+    dynamicActivate("ja");
   }, []);
 
   return <DashBoard />;

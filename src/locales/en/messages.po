@@ -15,7 +15,7 @@ msgstr ""
 
 #: src/features/summary/summary.tsx:21
 msgid "個"
-msgstr ""
+msgstr " "
 
 #: src/features/summary/summary.tsx:22
 #: src/features/summary/summary.tsx:28

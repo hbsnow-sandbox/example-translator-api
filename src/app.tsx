@@ -2,7 +2,7 @@ import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
-import { loadCatalog } from "./lib/load-catalog";
+import { dynamicActivate } from "./lib/dynamic-activate";
 
 const router = createRouter({ routeTree });
 
@@ -12,7 +12,7 @@ declare module "@tanstack/react-router" {
   }
 }
 
-loadCatalog("ja");
+dynamicActivate("ja");
 
 export const App = () => (
   <I18nProvider i18n={i18n}>
