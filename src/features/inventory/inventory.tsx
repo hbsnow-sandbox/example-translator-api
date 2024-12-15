@@ -8,6 +8,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
+import { Trans } from "@lingui/react/macro";
 
 const inventoryData = [
   { id: 1, product: "製品 A", quantity: 1000, status: "在庫あり" },
@@ -21,15 +22,23 @@ export const Inventory = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-lg sm:text-xl">在庫状況</CardTitle>
+        <CardTitle className="text-lg sm:text-xl">
+          <Trans>在庫状況</Trans>
+        </CardTitle>
       </CardHeader>
       <CardContent className="overflow-x-auto">
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>製品</TableHead>
-              <TableHead>数量</TableHead>
-              <TableHead>状態</TableHead>
+              <TableHead>
+                <Trans>製品</Trans>
+              </TableHead>
+              <TableHead>
+                <Trans>数量</Trans>
+              </TableHead>
+              <TableHead>
+                <Trans>状態</Trans>
+              </TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

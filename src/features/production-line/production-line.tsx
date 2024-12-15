@@ -4,6 +4,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { Trans, useLingui } from "@lingui/react/macro";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 const productionData = [
@@ -15,15 +16,19 @@ const productionData = [
 ];
 
 export const ProductionLine = () => {
+  const { t } = useLingui();
+
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-lg sm:text-xl">生産ライン稼働状況</CardTitle>
+        <CardTitle className="text-lg sm:text-xl">
+          <Trans>生産ライン稼働状況</Trans>
+        </CardTitle>
       </CardHeader>
       <CardContent>
         <ChartContainer
           config={{
-            production: { label: `生産量` },
+            production: { label: t`生産量` },
           }}
           className="h-[280px] w-full"
         >

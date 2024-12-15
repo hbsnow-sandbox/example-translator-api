@@ -24,6 +24,10 @@ msgstr "個"
 msgid "先月比"
 msgstr "先月比"
 
+#: src/features/alert/alert.tsx:30
+msgid "最近のアラート"
+msgstr "最近のアラート"
+
 #: src/features/summary/summary.tsx:38
 msgid "品質合格率"
 msgstr "品質合格率"
@@ -32,10 +36,42 @@ msgstr "品質合格率"
 msgid "在庫回転率"
 msgstr "在庫回転率"
 
+#: src/features/inventory/inventory.tsx:26
+msgid "在庫状況"
+msgstr "在庫状況"
+
+#: src/features/inventory/inventory.tsx:37
+msgid "数量"
+msgstr "数量"
+
+#: src/features/inventory/inventory.tsx:40
+msgid "状態"
+msgstr "状態"
+
+#: src/features/production-line/production-line.tsx:25
+msgid "生産ライン稼働状況"
+msgstr "生産ライン稼働状況"
+
+#: src/features/production-line/production-line.tsx:31
+msgid "生産量"
+msgstr "生産量"
+
 #: src/features/summary/summary.tsx:31
 msgid "稼働率"
 msgstr "稼働率"
 
+#: src/features/alert/alert.tsx:40
+msgid "緊急"
+msgstr "緊急"
+
 #: src/features/summary/summary.tsx:18
 msgid "総生産量"
 msgstr "総生産量"
+
+#: src/features/inventory/inventory.tsx:34
+msgid "製品"
+msgstr "製品"
+
+#: src/features/alert/alert.tsx:40
+msgid "警告"
+msgstr "警告"

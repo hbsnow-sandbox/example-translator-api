@@ -1,7 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Trans, useLingui } from "@lingui/react/macro";
 
-const alerts = [
+const alertData = [
   {
     id: "1",
     message: "製品 E の不良率が上昇傾向",
@@ -20,19 +21,23 @@ const alerts = [
 ];
 
 export const Alert = () => {
+  const { t } = useLingui();
+
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-lg sm:text-xl">最近のアラート</CardTitle>
+        <CardTitle className="text-lg sm:text-xl">
+          <Trans>最近のアラート</Trans>
+        </CardTitle>
       </CardHeader>
       <CardContent>
         <ul className="space-y-2">
-          {alerts.map((alert) => (
+          {alertData.map((alert) => (
             <li key={alert.id} className="flex items-center space-x-2">
               <Badge
                 variant={alert.severity === "high" ? "destructive" : "outline"}
               >
-                {alert.severity === "high" ? "緊急" : "警告"}
+                {alert.severity === "high" ? t`緊急` : t`警告`}
               </Badge>
               <span className="text-sm sm:text-base">{alert.message}</span>
             </li>

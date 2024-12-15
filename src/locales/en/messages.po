@@ -24,18 +24,54 @@ msgstr ""
 msgid "先月比"
 msgstr "MoM"
 
+#: src/features/alert/alert.tsx:30
+msgid "最近のアラート"
+msgstr "Recent Alerts"
+
 #: src/features/summary/summary.tsx:38
 msgid "品質合格率"
-msgstr ""
+msgstr "Quality Compliance Rate"
 
 #: src/features/summary/summary.tsx:25
 msgid "在庫回転率"
-msgstr ""
+msgstr "Inventory Turnover"
+
+#: src/features/inventory/inventory.tsx:26
+msgid "在庫状況"
+msgstr "Inventory Status"
+
+#: src/features/inventory/inventory.tsx:37
+msgid "数量"
+msgstr "Quantity"
+
+#: src/features/inventory/inventory.tsx:40
+msgid "状態"
+msgstr "Inventory Status"
+
+#: src/features/production-line/production-line.tsx:25
+msgid "生産ライン稼働状況"
+msgstr "Production Line Status"
+
+#: src/features/production-line/production-line.tsx:31
+msgid "生産量"
+msgstr "Production Volume"
 
 #: src/features/summary/summary.tsx:31
 msgid "稼働率"
-msgstr ""
+msgstr "Operating Rate"
+
+#: src/features/alert/alert.tsx:40
+msgid "緊急"
+msgstr "Warning"
 
 #: src/features/summary/summary.tsx:18
 msgid "総生産量"
-msgstr ""
+msgstr "Total Production"
+
+#: src/features/inventory/inventory.tsx:34
+msgid "製品"
+msgstr "Product"
+
+#: src/features/alert/alert.tsx:40
+msgid "警告"
+msgstr "Caution"
