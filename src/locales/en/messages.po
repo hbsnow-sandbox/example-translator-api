@@ -36,19 +36,27 @@ msgstr "Recent Alerts"
 msgid "品質合格率"
 msgstr "Quality Compliance Rate"
 
+#: src/features/inventory/components/inventory.tsx:28
+msgid "在庫あり"
+msgstr "Available"
+
 #: src/features/summary/components/summary.tsx:25
 msgid "在庫回転率"
 msgstr "Inventory Turnover"
 
-#: src/features/inventory/components/inventory.tsx:26
+#: src/features/inventory/components/inventory.tsx:29
+msgid "在庫少"
+msgstr "Low"
+
+#: src/features/inventory/components/inventory.tsx:40
 msgid "在庫状況"
 msgstr "Inventory Status"
 
-#: src/features/inventory/components/inventory.tsx:37
+#: src/features/inventory/components/inventory.tsx:51
 msgid "数量"
 msgstr "Quantity"
 
-#: src/features/inventory/components/inventory.tsx:40
+#: src/features/inventory/components/inventory.tsx:54
 msgid "状態"
 msgstr "Inventory Status"
 
@@ -64,6 +72,7 @@ msgstr "Production Volume"
 msgid "稼働率"
 msgstr "Operating Rate"
 
+#: src/features/inventory/components/inventory.tsx:30
 #: src/features/alert/components/alert.tsx:25
 msgid "緊急"
 msgstr "Warning"
@@ -72,7 +81,7 @@ msgstr "Warning"
 msgid "総生産量"
 msgstr "Total Production"
 
-#: src/features/inventory/components/inventory.tsx:34
+#: src/features/inventory/components/inventory.tsx:48
 msgid "製品"
 msgstr "Product"
 

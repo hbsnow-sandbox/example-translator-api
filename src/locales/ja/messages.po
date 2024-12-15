@@ -36,19 +36,27 @@ msgstr "最近のアラート"
 msgid "品質合格率"
 msgstr "品質合格率"
 
+#: src/features/inventory/components/inventory.tsx:28
+msgid "在庫あり"
+msgstr "在庫あり"
+
 #: src/features/summary/components/summary.tsx:25
 msgid "在庫回転率"
 msgstr "在庫回転率"
 
-#: src/features/inventory/components/inventory.tsx:26
+#: src/features/inventory/components/inventory.tsx:29
+msgid "在庫少"
+msgstr "在庫少"
+
+#: src/features/inventory/components/inventory.tsx:40
 msgid "在庫状況"
 msgstr "在庫状況"
 
-#: src/features/inventory/components/inventory.tsx:37
+#: src/features/inventory/components/inventory.tsx:51
 msgid "数量"
 msgstr "数量"
 
-#: src/features/inventory/components/inventory.tsx:40
+#: src/features/inventory/components/inventory.tsx:54
 msgid "状態"
 msgstr "状態"
 
@@ -64,6 +72,7 @@ msgstr "生産量"
 msgid "稼働率"
 msgstr "稼働率"
 
+#: src/features/inventory/components/inventory.tsx:30
 #: src/features/alert/components/alert.tsx:25
 msgid "緊急"
 msgstr "緊急"
@@ -72,7 +81,7 @@ msgstr "緊急"
 msgid "総生産量"
 msgstr "総生産量"
 
-#: src/features/inventory/components/inventory.tsx:34
+#: src/features/inventory/components/inventory.tsx:48
 msgid "製品"
 msgstr "製品"
 

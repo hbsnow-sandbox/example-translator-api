@@ -8,17 +8,31 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Trans } from "@lingui/react/macro";
+import { Trans, useLingui } from "@lingui/react/macro";
+import { msg } from "@lingui/core/macro";
 
 const inventoryData = [
-  { id: 1, product: "製品 A", quantity: 1000, status: "在庫あり" },
-  { id: 2, product: "製品 B", quantity: 500, status: "在庫少" },
-  { id: 3, product: "製品 C", quantity: 1500, status: "在庫あり" },
-  { id: 4, product: "製品 D", quantity: 200, status: "緊急" },
-  { id: 5, product: "製品 E", quantity: 800, status: "在庫あり" },
+  {
+    id: 1,
+    product: "製品 A",
+    quantity: 1000,
+    status: "available" as const,
+  },
+  { id: 2, product: "製品 B", quantity: 500, status: "low" as const },
+  { id: 3, product: "製品 C", quantity: 1500, status: "available" as const },
+  { id: 4, product: "製品 D", quantity: 200, status: "warning" as const },
+  { id: 5, product: "製品 E", quantity: 800, status: "available" as const },
 ];
 
+const statusMessages = {
+  available: msg`在庫あり`,
+  low: msg`在庫少`,
+  warning: msg`緊急`,
+} as const;
+
 export const Inventory = () => {
+  const { t } = useLingui();
+
   return (
     <Card>
       <CardHeader>
@@ -49,14 +63,14 @@ export const Inventory = () => {
                 <TableCell>
                   <Badge
                     variant={
-                      item.status === "在庫あり"
+                      item.status === "available"
                         ? "default"
-                        : item.status === "在庫少"
+                        : item.status === "low"
                           ? "outline"
                           : "destructive"
                     }
                   >
-                    {item.status}
+                    {t(statusMessages[item.status])}
                   </Badge>
                 </TableCell>
               </TableRow>

@@ -16,7 +16,7 @@ const alertData = [
   },
   {
     id: "3",
-    message: "ライン A の生産効率が目標値未達",
+    message: "ライン C の生産効率が目標値未達",
     severity: "warning" as const,
   },
 ];
