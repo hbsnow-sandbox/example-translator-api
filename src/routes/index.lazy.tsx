@@ -1,8 +1,8 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import { Summary } from "@/features/summary";
-import { ProductionLine } from "@/features/production-line";
-import { Inventory } from "@/features/inventory";
-import { Alert } from "@/features/alert";
+import { Summary } from "@/features/summary/components";
+import { ProductionLine } from "@/features/production-line/components";
+import { Inventory } from "@/features/inventory/components";
+import { Alert } from "@/features/alert/components";
 import { useEffect } from "react";
 import { loadCatalog } from "@/lib/load-catalog";
 

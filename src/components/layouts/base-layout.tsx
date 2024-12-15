@@ -1,4 +1,4 @@
-import { LangSelector } from "@/features/lang-selector";
+import { LangSelector } from "@/features/lang-selector/components";
 
 type Props = {
   children: React.ReactNode;

@@ -1,4 +1,4 @@
-import { SummaryCard } from "@/features/summary/summary-card";
+import { SummaryCard } from "@/features/summary/components/summary-card";
 import { Bell, Package, Percent, TrendingUp } from "lucide-react";
 import { useLingui } from "@lingui/react/macro";
 

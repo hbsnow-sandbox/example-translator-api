@@ -7,7 +7,9 @@ import eslintConfigPrettier from "eslint-config-prettier";
 import tailwind from "eslint-plugin-tailwindcss";
 
 export default tseslint.config(
-  { ignores: ["dist", "src/components/ui"] },
+  {
+    ignores: ["dist/"],
+  },
   {
     extends: [
       js.configs.recommended,
@@ -15,6 +17,7 @@ export default tseslint.config(
       eslintConfigPrettier,
       ...tailwind.configs["flat/recommended"],
     ],
+    ignores: ["src/components/ui/**", "src/locales/**", "src/routeTree.gen.ts"],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,

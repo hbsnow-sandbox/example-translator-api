@@ -1,11 +1,16 @@
 import { BaseLayout } from "@/components/layouts/base-layout";
-import { createRootRoute, Outlet } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/router-devtools";
+import { TanStackRouterDevtools } from "@/lib/tan-stack-router-devtools";
+import {
+  createRootRoute,
+  Outlet,
+  ScrollRestoration,
+} from "@tanstack/react-router";
 
 export const Route = createRootRoute({
   component: () => (
     <BaseLayout>
       <Outlet />
+      <ScrollRestoration />
       <TanStackRouterDevtools />
     </BaseLayout>
   ),

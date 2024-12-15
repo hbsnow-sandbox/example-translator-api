@@ -1,3 +1,5 @@
 src/components/ui/**/*
 src/lib/**/*
+src/locales/**/*
+src/routeTree.gen.ts
 pnpm-lock.yaml
