@@ -2,6 +2,8 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Trans, useLingui } from "@lingui/react/macro";
 import { msg } from "@lingui/core/macro";
+import { useTranslate } from "@/contexts/translate/hooks/use-translate";
+import { useMemo } from "react";
 
 const alertData = [
   {
@@ -29,6 +31,9 @@ const statusMessages = {
 export const Alert = () => {
   const { t } = useLingui();
 
+  const messages = useMemo(() => alertData.map((alert) => alert.message), []);
+  const translatedMessages = useTranslate(messages);
+
   return (
     <Card>
       <CardHeader>
@@ -38,7 +43,7 @@ export const Alert = () => {
       </CardHeader>
       <CardContent>
         <ul className="space-y-2">
-          {alertData.map((alert) => (
+          {alertData.map((alert, i) => (
             <li key={alert.id} className="flex items-center space-x-2">
               <Badge
                 variant={
@@ -47,7 +52,9 @@ export const Alert = () => {
               >
                 {t(statusMessages[alert.severity])}
               </Badge>
-              <span className="text-sm sm:text-base">{alert.message}</span>
+              <span className="text-sm sm:text-base">
+                {translatedMessages.at(i)}
+              </span>
             </li>
           ))}
         </ul>

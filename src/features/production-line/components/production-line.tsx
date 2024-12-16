@@ -8,11 +8,11 @@ import { Trans, useLingui } from "@lingui/react/macro";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 const productionData = [
-  { name: "ライン A", production: 400 },
-  { name: "ライン B", production: 300 },
-  { name: "ライン C", production: 200 },
-  { name: "ライン D", production: 350 },
-  { name: "ライン E", production: 280 },
+  { name: "A", production: 400 },
+  { name: "B", production: 300 },
+  { name: "C", production: 200 },
+  { name: "D", production: 350 },
+  { name: "E", production: 280 },
 ];
 
 export const ProductionLine = () => {

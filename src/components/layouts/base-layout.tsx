@@ -9,7 +9,7 @@ export const BaseLayout = ({ children }: Props) => {
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="border-b p-4 sm:p-6">
-        <div className="container flex items-center justify-between">
+        <div className="container mx-auto flex items-center justify-between">
           <h1 className="text-2xl font-bold">
             <Trans>製造サンプルダッシュボード</Trans>
           </h1>

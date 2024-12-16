@@ -28,7 +28,7 @@ msgstr " "
 msgid "先月比"
 msgstr "MoM"
 
-#: src/features/alert/components/alert.tsx:36
+#: src/features/alert/components/alert.tsx:41
 msgid "最近のアラート"
 msgstr "Recent Alerts"
 
@@ -36,7 +36,7 @@ msgstr "Recent Alerts"
 msgid "品質合格率"
 msgstr "Quality Compliance Rate"
 
-#: src/features/inventory/components/inventory.tsx:28
+#: src/features/inventory/components/inventory.tsx:29
 msgid "在庫あり"
 msgstr "Available"
 
@@ -44,19 +44,19 @@ msgstr "Available"
 msgid "在庫回転率"
 msgstr "Inventory Turnover"
 
-#: src/features/inventory/components/inventory.tsx:29
+#: src/features/inventory/components/inventory.tsx:30
 msgid "在庫少"
 msgstr "Low"
 
-#: src/features/inventory/components/inventory.tsx:40
+#: src/features/inventory/components/inventory.tsx:49
 msgid "在庫状況"
 msgstr "Inventory Status"
 
-#: src/features/inventory/components/inventory.tsx:51
+#: src/features/inventory/components/inventory.tsx:60
 msgid "数量"
 msgstr "Quantity"
 
-#: src/features/inventory/components/inventory.tsx:54
+#: src/features/inventory/components/inventory.tsx:63
 msgid "状態"
 msgstr "Inventory Status"
 
@@ -72,8 +72,8 @@ msgstr "Production Volume"
 msgid "稼働率"
 msgstr "Operating Rate"
 
-#: src/features/inventory/components/inventory.tsx:30
-#: src/features/alert/components/alert.tsx:25
+#: src/features/inventory/components/inventory.tsx:31
+#: src/features/alert/components/alert.tsx:27
 msgid "緊急"
 msgstr "Warning"
 
@@ -81,14 +81,34 @@ msgstr "Warning"
 msgid "総生産量"
 msgstr "Total Production"
 
-#: src/features/inventory/components/inventory.tsx:48
+#: src/features/inventory/components/inventory.tsx:57
 msgid "製品"
 msgstr "Product"
+
+#: src/features/inventory/components/inventory.tsx:35
+msgid "製品 A"
+msgstr "Product A"
+
+#: src/features/inventory/components/inventory.tsx:36
+msgid "製品 B"
+msgstr "Product B"
+
+#: src/features/inventory/components/inventory.tsx:37
+msgid "製品 C"
+msgstr "Product C"
+
+#: src/features/inventory/components/inventory.tsx:38
+msgid "製品 D"
+msgstr "Product D"
+
+#: src/features/inventory/components/inventory.tsx:39
+msgid "製品 E"
+msgstr "Product E"
 
 #: src/components/layouts/base-layout.tsx:14
 msgid "製造サンプルダッシュボード"
 msgstr "Manufacturing Sample Dashboard"
 
-#: src/features/alert/components/alert.tsx:26
+#: src/features/alert/components/alert.tsx:28
 msgid "警告"
 msgstr "Caution"

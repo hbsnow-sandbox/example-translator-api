@@ -28,7 +28,7 @@ msgstr "個"
 msgid "先月比"
 msgstr "先月比"
 
-#: src/features/alert/components/alert.tsx:36
+#: src/features/alert/components/alert.tsx:41
 msgid "最近のアラート"
 msgstr "最近のアラート"
 
@@ -36,7 +36,7 @@ msgstr "最近のアラート"
 msgid "品質合格率"
 msgstr "品質合格率"
 
-#: src/features/inventory/components/inventory.tsx:28
+#: src/features/inventory/components/inventory.tsx:29
 msgid "在庫あり"
 msgstr "在庫あり"
 
@@ -44,19 +44,19 @@ msgstr "在庫あり"
 msgid "在庫回転率"
 msgstr "在庫回転率"
 
-#: src/features/inventory/components/inventory.tsx:29
+#: src/features/inventory/components/inventory.tsx:30
 msgid "在庫少"
 msgstr "在庫少"
 
-#: src/features/inventory/components/inventory.tsx:40
+#: src/features/inventory/components/inventory.tsx:49
 msgid "在庫状況"
 msgstr "在庫状況"
 
-#: src/features/inventory/components/inventory.tsx:51
+#: src/features/inventory/components/inventory.tsx:60
 msgid "数量"
 msgstr "数量"
 
-#: src/features/inventory/components/inventory.tsx:54
+#: src/features/inventory/components/inventory.tsx:63
 msgid "状態"
 msgstr "状態"
 
@@ -72,8 +72,8 @@ msgstr "生産量"
 msgid "稼働率"
 msgstr "稼働率"
 
-#: src/features/inventory/components/inventory.tsx:30
-#: src/features/alert/components/alert.tsx:25
+#: src/features/inventory/components/inventory.tsx:31
+#: src/features/alert/components/alert.tsx:27
 msgid "緊急"
 msgstr "緊急"
 
@@ -81,14 +81,34 @@ msgstr "緊急"
 msgid "総生産量"
 msgstr "総生産量"
 
-#: src/features/inventory/components/inventory.tsx:48
+#: src/features/inventory/components/inventory.tsx:57
 msgid "製品"
 msgstr "製品"
+
+#: src/features/inventory/components/inventory.tsx:35
+msgid "製品 A"
+msgstr "製品 A"
+
+#: src/features/inventory/components/inventory.tsx:36
+msgid "製品 B"
+msgstr "製品 B"
+
+#: src/features/inventory/components/inventory.tsx:37
+msgid "製品 C"
+msgstr "製品 C"
+
+#: src/features/inventory/components/inventory.tsx:38
+msgid "製品 D"
+msgstr "製品 D"
+
+#: src/features/inventory/components/inventory.tsx:39
+msgid "製品 E"
+msgstr "製品 E"
 
 #: src/components/layouts/base-layout.tsx:14
 msgid "製造サンプルダッシュボード"
 msgstr "製造サンプルダッシュボード"
 
-#: src/features/alert/components/alert.tsx:26
+#: src/features/alert/components/alert.tsx:28
 msgid "警告"
 msgstr "警告"

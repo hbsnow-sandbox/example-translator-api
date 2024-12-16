@@ -10,18 +10,19 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Trans, useLingui } from "@lingui/react/macro";
 import { msg } from "@lingui/core/macro";
+import type { MessageDescriptor } from "@lingui/core";
 
 const inventoryData = [
   {
-    id: 1,
+    id: "1",
     product: "製品 A",
     quantity: 1000,
     status: "available" as const,
   },
-  { id: 2, product: "製品 B", quantity: 500, status: "low" as const },
-  { id: 3, product: "製品 C", quantity: 1500, status: "available" as const },
-  { id: 4, product: "製品 D", quantity: 200, status: "warning" as const },
-  { id: 5, product: "製品 E", quantity: 800, status: "available" as const },
+  { id: "2", product: "製品 B", quantity: 500, status: "low" as const },
+  { id: "3", product: "製品 C", quantity: 1500, status: "available" as const },
+  { id: "4", product: "製品 D", quantity: 200, status: "warning" as const },
+  { id: "5", product: "製品 E", quantity: 800, status: "available" as const },
 ];
 
 const statusMessages = {
@@ -29,6 +30,14 @@ const statusMessages = {
   low: msg`在庫少`,
   warning: msg`緊急`,
 } as const;
+
+const products: { [key: string]: MessageDescriptor } = {
+  "製品 A": msg`製品 A`,
+  "製品 B": msg`製品 B`,
+  "製品 C": msg`製品 C`,
+  "製品 D": msg`製品 D`,
+  "製品 E": msg`製品 E`,
+};
 
 export const Inventory = () => {
   const { t } = useLingui();
@@ -58,7 +67,7 @@ export const Inventory = () => {
           <TableBody>
             {inventoryData.map((item) => (
               <TableRow key={item.id}>
-                <TableCell>{item.product}</TableCell>
+                <TableCell>{t(products[item.product])}</TableCell>
                 <TableCell>{item.quantity}</TableCell>
                 <TableCell>
                   <Badge

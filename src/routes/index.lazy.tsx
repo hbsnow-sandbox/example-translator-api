@@ -36,5 +36,9 @@ function Index() {
     dynamicActivate("ja");
   }, []);
 
-  return <DashBoard />;
+  return (
+    <div lang="en" className="container mx-auto">
+      <DashBoard />
+    </div>
+  );
 }

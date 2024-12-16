@@ -1,8 +1,9 @@
 import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
-import { routeTree } from "./routeTree.gen";
-import { dynamicActivate } from "./lib/dynamic-activate";
+import { routeTree } from "@/routeTree.gen";
+import { dynamicActivate } from "@/lib/dynamic-activate";
+import { TranslatorProvider } from "@/contexts/translate/provider";
 
 const router = createRouter({ routeTree });
 
@@ -12,10 +13,12 @@ declare module "@tanstack/react-router" {
   }
 }
 
-dynamicActivate("ja");
+await dynamicActivate("ja");
 
 export const App = () => (
   <I18nProvider i18n={i18n}>
-    <RouterProvider router={router} />
+    <TranslatorProvider>
+      <RouterProvider router={router} />
+    </TranslatorProvider>
   </I18nProvider>
 );
